@@ -1,99 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <!--<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png"> -->
-  <link href="./assets/favicon.ico" rel="icon">
-
-  <title>2d.jack</title>  
-  <link rel="stylesheet" href="animation.css">
-  <link href="./main.3f6952e4.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@2d.jack | AKA Jakaria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
-
-
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./about.html" title="">02 : About me</a></li>
-<!--          <li><a href="./works.html" title="">02 : Works</a></li> -->
-          <li><a href="./contact.html" title="">03 : Contact</a></li>
-        </ul>
-
-
-      </div> 
-    </div>
-  </nav>
-</header>
-<!-- Add your site or app content here -->
-
-  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space.jpg')">
-    <div class="cursor"></div>
-    <script>
-      const cursor = document.querySelector('.cursor');
-
-      document.addEventListener('mousemove', e => {
-        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-      })
-      document.addEventListener('click', () => {
-        cursor.classList.add("expand");
-        setTimeout(() => {
-          cursor.classList.remove("expand");
-        }, 600)
-      })
-    </script>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content">
-              <h1>Hello,<br>
-                <span id="typed-strings">
-                  <span>I'm Jack</span>
-                  <span>Bug Hunter</span>
-                  <span>Ethical Hacker</span>
-                  <span>Game Developer</span>
-                </span>
-                <span id="typed"></span>
-              </h1>
-              <h3>Respect Privacy, Respect Individuals<b>.</b></h3>
+<body>
+    <div class="cursor-trail"></div>
+    
+    <header class="pixel-header">
+        <nav class="pixel-nav">
+            <div class="nav-logo">
+                <a href="index.html#home"><span class="new-top">MJACK</span></a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-     movingBackgroundImage();
-  });
-</script>
+            <ul class="nav-menu">
+                <li><a href="#home" class="pixel-link active" data-page="home">HOME</a></li>
+                <li><a href="#about" class="pixel-link" data-page="about">ABOUT ME</a></li>
+                <li><a href="#game-dev" class="pixel-link" data-page="game-dev">GAME DEV</a></li>
+                <li><a href="#cyber-security" class="pixel-link" data-page="cyber-security">CYBER CAREER</a></li>
+                <li><a href="#interests" class="pixel-link" data-page="interests">SIDE MISSIONS</a></li>
+                <li><a href="#contact" class="pixel-link" data-page="contact">LET'S TALK</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="pixel-main">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="pixel-container">
+                <h1 class="pixel-title">WELCOME >>Player2</h1>
+                <div class="pixel-subtitle">
+                    <span class="pixel-text">>>Player1 JAKARIA MD</span>
+                </div>
+                
+                <!-- Retro Dialogue Box -->
+                <div class="dialogue-box">
+                    <div class="dialogue-header">
+                        <span class="dialogue-title">SYSTEM_MESSAGE</span>
+                    </div>
+                    <div class="dialogue-content">
+                        <p class="dialogue-text">
+                            Greetings, I'm Jakaria - a pixel in the ever-expanding screen of the internet. 
+                            By day, I defend the digital realm as an Infrastructure Security Engineer. By night, I craft pixelated 
+                            worlds and hunt for vulnerabilities. Welcome to my retro digital playground!
+                        </p>
+                        <div class="dialogue-prompt">PRESS ENTER TO CONTINUE...</div>
+                    </div>
+                </div>
 
-<script type="text/javascript" src="./main.70a66962.js"></script></body>
+                <!-- Level Select Menu -->
+                <div class="level-select">
+                    <h2 class="level-select-title">SELECT YOUR LEVEL</h2>
+                    <div class="level-menu">
+                        <div class="level-item" data-level="1">
+                            <span class="level-number">01</span>
+                            <span class="level-name">CYBERSECURITY QUEST</span>
+                            <span class="level-icon">🛡️</span>
+                        </div>
+                        <div class="level-item" data-level="2">
+                            <span class="level-number">02</span>
+                            <span class="level-name">GAME DEV ADVENTURE</span>
+                            <span class="level-icon">🎮</span>
+                        </div>
+                        <div class="level-item" data-level="3">
+                            <span class="level-number">03</span>
+                            <span class="level-name">CREATIVE SIDE MISSIONS</span>
+                            <span class="level-icon">🎨</span>
+                        </div>
+                        <div class="level-item" data-level="bonus">
+                            <span class="level-number">★</span>
+                            <span class="level-name">CONTACT ME</span>
+                            <span class="level-icon">📧</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- About Me Page -->
+        <section id="about" class="page">
+            <div class="pixel-container">
+                <h1 class="pixel-title">ABOUT THE DIGITAL ADVENTURER</h1>
+                
+                <!-- Three Pixel Card Sections -->
+                <div class="persona-cards">
+                    <!-- Cybersecurity Card -->
+                    <div class="persona-card">
+                        <div class="card-header">
+                            <span class="card-icon">🛡️</span>
+                            <h3 class="card-title">THE DIGITAL ADVENTURER</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="dialogue-box small">
+                                <div class="dialogue-content">
+                                    <p class="dialogue-text">
+                                        I’ve played games since the days of chunky pixels and 8-bit chiptunes—now I create them. 
+                                        As an indie developer, I blend imagination and code to build worlds where players can lose 
+                                        themselves, laugh, and connect. Every sprite is a brushstroke, every sound a heartbeat, 
+                                        each line of code part of a living universe.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-tag">BLUE TEAM | RED TEAM | SECURITY</span>
+                        </div>
+                    </div>
+
+                    <!-- Game Dev Card -->
+                    <div class="persona-card">
+                        <div class="card-header">
+                            <span class="card-icon">🎮</span>
+                            <h3 class="card-title">THE INDIE GAME ALCHEMIST</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="dialogue-box small">
+                                <div class="dialogue-content">
+                                    <p class="dialogue-text">
+                                        I’ve played games since the days of chunky pixels and 8-bit chiptunes—now I craft them.
+                                        As an indie developer, I blend imagination and code to create worlds where players can lose themselves,
+                                        laugh, and connect. Every sprite is a brushstroke, every sound a heartbeat, every line of code 
+                                        a piece of a living universe.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-tag">PIXEL ART | GAME DESIGN | INDIE DEV</span>
+                        </div>
+                    </div>
+
+                    <!-- Creative Life Card -->
+                    <div class="persona-card">
+                        <div class="card-header">
+                            <span class="card-icon">🎨</span>
+                            <h3 class="card-title">THE CREATIVE WANDERER</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="dialogue-box small">
+                                <div class="dialogue-content">
+                                    <p class="dialogue-text">
+                                        When I'm not decoding cyber puzzles or designing game levels, I roam the world 
+                                        with a camera in hand, capturing moments like rare in-game collectibles. 
+                                        Music, too, is my creative quest — transforming emotions into melodies. 
+                                        And whenever I stumble upon something new to learn, I treat it as an upgrade 
+                                        to my skill tree.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-tag">PHOTOGRAPHY | MUSIC | CREATIVITY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#home" class="pixel-button back-button" data-page="home">BACK HOME</a>
+            </div>
+        </section>
+
+        <!-- Game Dev Journey Page -->
+        <section id="game-dev" class="page">
+            <div class="pixel-container">
+                <h1 class="pixel-title">GAME DEV ADVENTURE</h1>
+                
+                <!-- Dream Realm Creation Section -->
+                <div class="studio-section">
+                    <div class="dialogue-box">
+                        <div class="dialogue-header">
+                            <span class="dialogue-title">DREAM_REALM_CREATION</span>
+                        </div>
+                        <div class="dialogue-content">
+                            <p class="dialogue-text">
+                                🎮 Explore a world of pixelated wonders! 🌟<br><br>
+                                Dream Realm Creation is your passport to pixelated adventures crafted with love and passion. 
+                                I alone try to create soem visually stunning pixel art games that will transport you to nostalgic realms 
+                                and immerse you in unique gameplay experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Types -->
+                <div class="game-types">
+                    <h3 class="section-title">GAME TYPES I CREATE</h3>
+                    <div class="game-types-grid">
+                        <div class="game-type">
+                            <span class="game-type-icon">🏰</span>
+                            <span class="game-type-name">DUNGEON</span>
+                        </div>
+                        <div class="game-type">
+                            <span class="game-type-icon">🔫</span>
+                            <span class="game-type-name">TOP-DOWN SHOOTING</span>
+                        </div>
+                        <div class="game-type">
+                            <span class="game-type-icon">➡️</span>
+                            <span class="game-type-name">SIDE SCROLLING</span>
+                        </div>
+                        <div class="game-type">
+                            <span class="game-type-icon">🎯</span>
+                            <span class="game-type-name">AND MORE...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Published Game -->
+                <div class="featured-games">
+                    <h3 class="section-title">MY PUBLISHED GAME</h3>
+                    <div class="games-grid">
+                        <div class="game-card">
+                            <div class="pixel-frame">
+                                <div class="game-placeholder">🚀</div>
+                            </div>
+                            <h3 class="game-title">ASTRO PLANE</h3>
+                            <p class="game-description">My latest published game - a quick glance into space adventure</p>
+                            <a href="https://dream-realm-creation.itch.io/astro-plane" target="_blank" class="pixel-button store-button">PLAY FREE ON ITCH.IO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Store Link -->
+                <div class="store-section">
+                    <div class="dialogue-box">
+                        <div class="dialogue-header">
+                            <span class="dialogue-title">VISIT OUR STORE</span>
+                        </div>
+                        <div class="dialogue-content">
+                            <p class="dialogue-text">
+                                🌈 A dash of nostalgia with a modern twist<br>
+                                Join us on this exciting journey through the pixelated cosmos and discover the magic 
+                                of Dream Realm creations!
+                            </p>
+                            <a href="https://dream-realm-creation.itch.io/" target="_blank" class="pixel-button store-button">VISIT STORE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#home" class="pixel-button back-button" data-page="home">BACK HOME</a>
+            </div>
+        </section>
+
+        <!-- Cyber Security Journey Page -->
+        <section id="cyber-security" class="page">
+            <div class="pixel-container hacker-theme">
+                <h1 class="pixel-title">MY CYBER SECURITY QUEST</h1>
+                
+                <!-- Education & Objective -->
+                <div class="education-section">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-title">PIXEL Terminal</span>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">cat education.txt</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Diploma in Computer Science - COMPLETED</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Focus: Complex computer-related challenges</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">cat objective.txt</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Objective: Join Red Team as security expert</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Status: IN PROGRESS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Table -->
+                <div class="skills-section">
+                    <h3 System class="section-title">SKILLS MATRIX</h3>
+                    <div class="skills-table">
+                        <div class="skill-row">
+                            <span class="skill-name">Penetration Testing</span>
+                            <span class="skill-desc">Identifying and exploiting vulnerabilities</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Networking Knowledge</span>
+                            <span class="skill-desc">TCP/IP, protocols, traffic analysis</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Enumeration & Scanning</span>
+                            <span class="skill-desc">Information gathering, vulnerability scanning</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Exploitation Techniques</span>
+                            <span class="skill-desc">Exploitation methodologies and tools</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Web Application Security</span>
+                            <span class="skill-desc">SQL injection, XSS, auth bypass</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Linux & Windows Admin</span>
+                            <span class="skill-desc">System commands and security</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">CTF Challenges</span>
+                            <span class="skill-desc">TryHackMe: Blue, Ice, Retro, more...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="tools-section">
+                    <h3 class="section-title">TOOLKIT</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">Nmap</div>
+                        <div class="tool-item">Nessus</div>
+                        <div class="tool-item">Metasploit</div>
+                        <div class="tool-item">Burp Suite</div>
+                        <div class="tool-item">Wireshark</div>
+                        <div class="tool-item">John the Ripper</div>
+                        <div class="tool-item">Hydra</div>
+                        <div class="tool-item">WAZUH</div>
+                        <div class="tool-item">And More...</div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="certifications-section">
+                    <h3 class="section-title">CERTIFICATIONS</h3>
+                    <div class="certifications-grid">
+                        <div class="certification-card">
+                            <div class="cert-header">eJPTv2</div>
+                            <div class="cert-body">eLearnSecurity Junior Penetration Tester</div>
+                            <div class="cert-footer">INE | Nov 2024 | ID: 127234306</div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="cert-header">ICCA</div>
+                            <div class="cert-body">eLearnSecurity Certified Cloud Associate</div>
+                            <div class="cert-footer">INE | Jan 2025 | ID: 130843210</div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="cert-header">HTB</div>
+                            <div class="cert-body">Cyber Security 101</div>
+                            <div class="cert-footer">Hack The Box | Learning Path | COMPLETED</div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="cert-header">HTB</div>
+                            <div class="cert-body">Jr Penetration Tester</div>
+                            <div class="cert-footer">Hack The Box | Learning Path | COMPLETED</div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="cert-header">HTB</div>
+                            <div class="cert-body">Web Fundamentals</div>
+                            <div class="cert-footer">Hack The Box | Learning Path | COMPLETED</div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="cert-header">HTB</div>
+                            <div class="cert-body">Jr Penetration Tester (PT1)</div>
+                            <div class="cert-footer">Hack The Box | ON PROGRESS...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#home" class="pixel-button back-button" data-page="home">BACK HOME</a>
+            </div>
+        </section>
+
+        <!-- Creative Side Missions Page -->
+        <section id="interests" class="page">
+            <div class="pixel-container">
+                <h1 class="pixel-title">CREATIVE SIDE MISSIONS</h1>
+                
+                <!-- Photography Section -->
+                <div class="interest-section">
+                    <h2 class="section-title">PHOTOGRAPHY QUEST</h2>
+                    <div class="dialogue-box">
+                        <div class="dialogue-header">
+                            <span class="dialogue-title">CAPTURE_MEMORIES</span>
+                        </div>
+                        <div class="dialogue-content">
+                            <p class="dialogue-text">
+                                📸 Roaming the world with a camera in hand, capturing moments like rare in-game collectibles. 
+                                Each photograph is a unique achievement unlocked in the game of life.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-frame">
+                            <img src="assets/images/1.jpg" alt="Photo 1" class="photo" draggable="false">
+                        </div>
+                        <div class="photo-frame">
+                            <img src="assets/images/2.jpg" alt="Photo 2" class="photo" draggable="false">
+                        </div>
+                        <div class="photo-frame">
+                            <img src="assets/images/3.jpg" alt="Photo 3" class="photo" draggable="false">
+                        </div>
+                        <div class="photo-frame">
+                            <img src="assets/images/4.jpg" alt="Photo 4" class="photo" draggable="false">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Production Section -->
+                <div class="interest-section">
+                    <h2 class="section-title">MUSIC PRODUCTION STUDIO</h2>
+                    <div class="dialogue-box">
+                        <div class="dialogue-header">
+                            <span class="dialogue-title">SOUND_WORKSHOP</span>
+                        </div>
+                        <div class="dialogue-content">
+                            <p class="dialogue-text">
+                                🎵 Transforming emotions into melodies - I've created countless mini tracks! 
+                                Music is my creative quest, each note a power-up in the soundtrack of life.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Music Player -->
+                    <div class="music-player">
+                        <div class="player-header">
+                            <span class="player-title">SOME_OF_MY_TRACKS</span>
+                        </div>
+                        <div class="music-tracks">
+                            <div class="music-track">
+                                <button class="play-button" data-track="1">▶ PLAY</button>
+                                <span class="track-name">Dream of Lily | A lofi beat</span>
+                                <span class="track-duration">1:24</span>
+                            </div>
+                            <div class="music-track">
+                                <button class="play-button" data-track="2">▶ PLAY</button>
+                                <span class="track-name">Explosive Pulse | Aggressive Phonk</span>
+                                <span class="track-duration">0:37</span>
+                            </div>
+                            <div class="music-track">
+                                <button class="play-button" data-track="3">▶ PLAY</button>
+                                <span class="track-name">The Kid LAROI, Justin Bieber - STAY | Melodic Dubstep Remix</span>
+                                <span class="track-duration">1:49</span>
+                            </div>
+                        </div>
+                        <!-- Playback Controls -->
+                        <div class="playback-controls">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="total-time">0:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="volume-container">
+                                <span class="volume-icon">🔊</span>
+                                <input type="range" class="volume-slider" min="0" max="100" value="70">
+                                <span class="volume-value">70%</span>
+                            </div>
+                        </div>
+
+                        <div class="youtube-link">
+                            <a href="https://youtube.com/@jakaria-md" target="_blank" class="pixel-button youtube-button">
+                                📺 VISIT YOUTUBE CHANNEL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Writing Section -->
+                <div class="interest-section">
+                    <h2 class="section-title">WRITING.yml</h2>
+                    <div class="writing-container">
+                        <div class="writing-piece">
+                            <div class="dialogue-box">
+                                <div class="dialogue-header">
+                                    <span class="dialogue-title">Sacrifice_is_the_only_way</span>
+                                </div>
+                                <div class="dialogue-content">
+                                    <p class="dialogue-text">
+                                        Sacrifice is the pathway of where you are and where you want to be. 
+                                        It is the ability to give away comforts, peace of mind, and even relationships in 
+                                        order to achieve something greater than oneself. Sacrifice is not easy, but it is the fundamental
+                                        component of all great accomplishments. You may lose some things along the way,
+                                        but the benefits in intellect, power, and fulfillment much surpass the sacrifices. 
+                                        Because it is the thing that will make you who you really are."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="writing-piece">
+                            <div class="dialogue-box">
+                                <div class="dialogue-header">
+                                    <span class="dialogue-title">Truth_always_hits_hard</span>
+                                </div>
+                                <div class="dialogue-content">
+                                    <p class="dialogue-text">
+                                        Lies may hide the truth, but it can’t hide or change the reality. 
+                                        Now The question is… If you can’t hide the reality how do you hide the Lies? 
+                                        You can’t. And a line for the liers —Truth always hits hard.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thoughts Section -->
+                <div class="interest-section">
+                    <h2 class="section-title">ACHIEVEMENT UNLOCKS</h2>
+                    <div class="thoughts-container">
+                        <div class="thought-bubble">
+                            <div class="thought-icon">🏆</div>
+                            <p class="thought-text">"There are no key or nither any backbone but always a way."</p>
+                        </div>
+                        <div class="thought-bubble">
+                            <div class="thought-icon">⚡</div>
+                            <p class="thought-text">"The best way to predict the future is to create it."</p>
+                        </div>
+                        <div class="thought-bubble">
+                            <div class="thought-icon">🎯</div>
+                            <p class="thought-text">"Code is poetry written in logic instead of words."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#home" class="pixel-button back-button" data-page="home">BACK HOME</a>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="pixel-container">
+                <h1 class="pixel-title">CONTACT MISSION CONTROL</h1>
+                
+                <div class="dialogue-box">
+                    <div class="dialogue-header">
+                        <span class="dialogue-title">TRANSMISSION_PROTOCOL</span>
+                    </div>
+                    <div class="dialogue-content">
+                        <p class="dialogue-text">
+                            📡 Establishing secure connection... Ready to receive your message! 
+                            Whether you want to collaborate on a game, discuss cybersecurity, 
+                            or just chat about pixels, I'm here to listen...
+                        </p>
+                    </div>
+                </div>
+
+                <form class="pixel-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="pixel-label">AGENT_NAME</label>
+                        <input type="text" id="name" placeholder="Your Cool Name!" name="name" class="pixel-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="pixel-label">ENCRYPTED_EMAIL</label>
+                        <input type="email" id="email" placeholder="example@example.com" name="email" class="pixel-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="pixel-label">MESSAGE_PAYLOAD</label>
+                        <textarea id="message" placeholder="Yo!" name="message" class="pixel-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="pixel-button submit-button">TRANSMIT MESSAGE</button>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="dialogue-box small">
+                        <div class="dialogue-header">
+                            <span class="dialogue-title">CONTACT_CHANNELS</span>
+                        </div>
+                        <div class="dialogue-content">
+                            <p class="dialogue-text">📧 jakaria101official@gmail.com</p>
+                            <p class="dialogue-text">🐙 @2d.jack</p>
+                            <p class="dialogue-text">💼 linkedin.com/in/MD-Jakaria</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#home" class="pixel-button back-button" data-page="home">BACK HOME</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
 </html>
